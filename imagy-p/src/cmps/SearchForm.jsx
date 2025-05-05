@@ -1,20 +1,19 @@
+
+import { useGlobalContext } from "../stateManager/Context";
+
+
 function SearchForm() {
 
+    const { setSearchQuery } = useGlobalContext()
 
     const url = 'https://api.unsplash.com/search/photos?page=1&query=office'
-
     function handleSubmit(e) {
         e.preventDefault()
         const searchValue = e.target.elements.search.value;
         if (!searchValue) return
-
-        console.log(searchValue)
-
-
+        setSearchQuery(searchValue)
 
     }
-
-
     return (
         <section >
             <h1 className="title">Fetchy</h1>

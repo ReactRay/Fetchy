@@ -70,7 +70,7 @@ html {
 
 
 .dark {
-  background-color: rgb(66, 66, 115);
+  background-color: rgb(35, 35, 53);
   color: rgb(194, 207, 202);
 }
 
@@ -171,9 +171,18 @@ ul {
 
 .img {
   width: 100%;
+  border-radius: 8px;
   display: block;
   object-fit: cover;
+  transition: all 0.5s;
+  box-shadow: 0 0.9rem 1.4rem #777
 }
+
+.img:hover {
+  transform: scale(0.9) translateY(-1rem);
+  box-shadow: 0.1rem 1rem 2.5rem #777
+}
+
 
 /* buttons */
 

@@ -1,15 +1,18 @@
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query';
+import { useGlobalContext } from '../stateManager/Context';
 
 
-
-const url = `https://api.unsplash.com/search/photos?query=shake&client_id=${import.meta.env.VITE_UNSPLASH_API_KEY}`;
 
 
 function Gallary() {
+
+    const { searchQuery } = useGlobalContext()
+    const url = `https://api.unsplash.com/search/photos?query=${searchQuery || "cats"}&client_id=${import.meta.env.VITE_UNSPLASH_API_KEY}`;
+
     const response = useQuery({
-        queryKey: ['images'],
+        queryKey: ['images', searchQuery],
         queryFn: async () => {
             const res = await axios.get(url)
 
