@@ -1,7 +1,9 @@
-import ThemeToggle from './ThemeToggle'
-import SearchForm from './SearchForm'
-import Gallary from './Gallary'
+import ThemeToggle from './cmps/ThemeToggle'
+import SearchForm from './cmps/SearchForm'
+import Gallary from './cmps/Gallary'
 
+
+console.log(import.meta.env.VITE_UNSPLASH_API_KEY)
 
 
 const App = () => {

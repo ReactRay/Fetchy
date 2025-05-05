@@ -1,4 +1,4 @@
-import { useGlobalContext } from "./Context"
+import { useGlobalContext } from "../stateManager/Context"
 
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 
