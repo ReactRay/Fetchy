@@ -169,9 +169,21 @@ ul {
   padding: 0;
 }
 
+.image-container {
+  height: 55dvh;
+
+  overflow-y: auto;
+  padding: 2.5rem;
+}
+
+.image-container::-webkit-scrollbar {
+  display: none;
+}
+
 .img {
-  width: 100%;
   border-radius: 8px;
+  width: 100%;
+  height: auto;
   display: block;
   object-fit: cover;
   transition: all 0.5s;
@@ -179,8 +191,8 @@ ul {
 }
 
 .img:hover {
-  transform: scale(0.9) translateY(-1rem);
-  box-shadow: 0.1rem 1rem 2.5rem #777
+  transform: translateY(-1rem);
+  box-shadow: 0.1rem 1rem 2.5rem #777;
 }
 
 
@@ -400,7 +412,7 @@ Gallery
   max-width: var(--max-width);
   margin: 3rem auto;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .image-container .img {
