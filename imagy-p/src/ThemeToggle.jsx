@@ -1,9 +1,12 @@
+import { useGlobalContext } from "./Context"
 
 
 function ThemeToggle() {
+
+    const { greeting } = useGlobalContext()
     return (
         <div>
-            <h2>theme</h2>
+            <h2>{greeting}</h2>
         </div>
     )
 }
